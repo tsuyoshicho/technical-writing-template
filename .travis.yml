@@ -1,0 +1,32 @@
+language: node_js
+node_js: "stable"
+dist: xenial
+git:
+  depth: 10
+
+jobs:
+  include:
+    - name: reviewdog for PR check
+      if: branch = noexistbranch
+      env:
+        - REVIEWDOG_VERSION=0.9.12
+        - REPORTER=github-pr-check
+    - name: reviewdog for PR comment
+      if: type = pull_request
+      env:
+        - REVIEWDOG_VERSION=0.9.12
+        - REPORTER=github-pr-review
+    - name: reviewdog for local
+      if: type != pull_request
+      env:
+        - REVIEWDOG_VERSION=0.9.12
+        - REPORTER=local
+
+install:
+    - mkdir -p ~/bin/ && export export PATH="~/bin/:$PATH"
+    - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b ~/bin "v${REVIEWDOG_VERSION}"
+    - npm install
+
+script:
+  - uname -a
+  - reviewdog -conf=.reviewdog.yml -reporter=${REPORTER} -diff="git diff HEAD^"
