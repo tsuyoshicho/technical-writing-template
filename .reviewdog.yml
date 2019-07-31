@@ -5,6 +5,6 @@ runner:
       - "%f:%l:%c: %m"
       - "%f: line %l, col %c, %m"
   redpen-doc:
-    cmd: redpen -c config/redpen-conf-ja.xml -L ja -l 0 -r plain doc/*.md
+    cmd: redpen -c config/redpen-conf-ja.xml -L ja -l 9999 -r plain doc/*.md
     errorformat:
       - "doc/%f:%l: %m"
