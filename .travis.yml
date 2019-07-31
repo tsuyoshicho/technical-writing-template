@@ -1,6 +1,7 @@
-language: node_js
-node_js: "stable"
+language: node_js, java
 dist: xenial
+node_js: node
+jdk: openjdk8
 git:
   depth: 10
 
@@ -9,23 +10,29 @@ jobs:
     - name: reviewdog for PR check
       if: branch = noexistbranch
       env:
+        - REDPEN_VERSION=1.10.1
         - REVIEWDOG_VERSION=0.9.12
         - REPORTER=github-pr-check
     - name: reviewdog for PR comment
       if: type = pull_request
       env:
+        - REDPEN_VERSION=1.10.1
         - REVIEWDOG_VERSION=0.9.12
         - REPORTER=github-pr-review
     - name: reviewdog for local
       if: type != pull_request
       env:
+        - REDPEN_VERSION=1.10.1
         - REVIEWDOG_VERSION=0.9.12
         - REPORTER=local
 
 install:
-    - mkdir -p ~/bin/ && export export PATH="~/bin/:$PATH"
+    - mkdir -p ~/bin/ && export export PATH="~/bin/:${PATH}"
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b ~/bin "v${REVIEWDOG_VERSION}"
     - npm install
+    - curl -sfLO https://github.com/redpen-cc/redpen/releases/download/redpen-${REDPEN_VERSION}/redpen-${REDPEN_VERSION}.tar.gz
+    - tar xvf redpen-${REDPEN_VERSION}.tar.gz
+    - export PATH="${PWD}/redpen-distribution-${REDPEN_VERSION}/bin:${PATH}"
 
 script:
   - uname -a
