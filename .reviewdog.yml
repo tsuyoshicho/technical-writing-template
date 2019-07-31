@@ -4,7 +4,7 @@ runner:
     errorformat:
       - "%f:%l:%c: %m"
       - "%f: line %l, col %c, %m"
-  redpen:
-    cmd: redpen -c config/redpen-conf-ja.xml -f markdown -l 0 -r plain doc/*.md
+  redpen-doc:
+    cmd: redpen -c config/redpen-conf-ja.xml -L ja -l 0 -r plain doc/*.md
     errorformat:
-      - "%f:%l: %m"
+      - "doc/%f:%l: %m"
