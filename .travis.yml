@@ -37,3 +37,4 @@ install:
 script:
   - uname -a
   - reviewdog -conf=.reviewdog.yml -reporter=${REPORTER} -diff="git diff HEAD^"
+    # - redpen -c config/redpen-conf-ja.xml -L ja -l 9999 -r plain doc/*.md 2>/dev/null
