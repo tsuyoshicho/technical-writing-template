@@ -1,4 +1,4 @@
-language: node_js, java
+language: generic
 dist: xenial
 node_js: node
 jdk: openjdk8
