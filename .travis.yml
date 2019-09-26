@@ -27,7 +27,7 @@ jobs:
         - REPORTER=local
 
 install:
-    - mkdir -p ~/bin/ && export export PATH="~/bin/:${PATH}"
+    - mkdir -p ~/bin/ && export PATH="~/bin/:${PATH}"
     - curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b ~/bin "v${REVIEWDOG_VERSION}"
     - npm install
     - curl -sfLO https://github.com/redpen-cc/redpen/releases/download/redpen-${REDPEN_VERSION}/redpen-${REDPEN_VERSION}.tar.gz
