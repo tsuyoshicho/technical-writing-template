@@ -7,18 +7,6 @@ git:
 
 jobs:
   include:
-    - name: reviewdog for PR check
-      if: branch = noexistbranch
-      env:
-        - REDPEN_VERSION=1.10.1
-        - REVIEWDOG_VERSION=0.9.12
-        - REPORTER=github-pr-check
-    - name: reviewdog for PR comment
-      if: type = pull_request
-      env:
-        - REDPEN_VERSION=1.10.1
-        - REVIEWDOG_VERSION=0.9.12
-        - REPORTER=github-pr-review
     - name: reviewdog for local
       if: type != pull_request
       env:
