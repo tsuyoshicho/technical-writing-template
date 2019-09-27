@@ -1,16 +1,19 @@
 name: reviewdog
 on: [pull_request]
 jobs:
-  textlint:
-    name: runner / textlint
+  redpen:
+    name: runner / redpen
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
         with:
           submodules: true
-      - name: textlint
-        uses: tsuyoshicho/action-textlint@v1
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '9.0.4'
+      - name: redpen
+        uses: tsuyoshicho/action-redpen@v0.0.10
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Change reporter.
-          textlint_flags: 'doc/*'
+          redpen_flags: 'doc/*'
