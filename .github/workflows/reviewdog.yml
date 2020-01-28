@@ -1,6 +1,31 @@
 name: reviewdog
 on: [pull_request]
 jobs:
+  textlint:
+    name: runner / textlint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+      - name: textlint-github-pr-check
+        uses: tsuyoshicho/action-textlint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+          textlint_flags: "doc/**"
+      - name: textlint-github-check
+        uses: tsuyoshicho/action-textlint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          textlint_flags: "doc/**"
+      - name: textlint-github-pr-review
+        uses: tsuyoshicho/action-textlint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          textlint_flags: "doc/**"
   redpen:
     name: runner / redpen
     runs-on: ubuntu-latest
@@ -9,7 +34,7 @@ jobs:
         with:
           submodules: true
       - name: redpen-github-pr-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
@@ -17,7 +42,7 @@ jobs:
           targets: "*.md"
           config: "config/redpen-conf-ja.xml"
       - name: redpen-github-check
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
@@ -25,7 +50,7 @@ jobs:
           targets: "*.md"
           config: "config/redpen-conf-ja.xml"
       - name: redpen-github-pr-review
-        uses: tsuyoshicho/action-redpen@master
+        uses: tsuyoshicho/action-redpen@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
