@@ -1,0 +1,34 @@
+name: reviewdog
+on: [pull_request]
+jobs:
+  redpen:
+    name: runner / redpen
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
+      - name: redpen-github-pr-check
+        uses: tsuyoshicho/action-redpen@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-check
+          basedir: "doc"
+          targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
+      - name: redpen-github-check
+        uses: tsuyoshicho/action-redpen@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          basedir: "doc"
+          targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
+      - name: redpen-github-pr-review
+        uses: tsuyoshicho/action-redpen@master
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          basedir: "doc"
+          targets: "*.md"
+          config: "config/redpen-conf-ja.xml"
