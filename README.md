@@ -12,3 +12,11 @@ Template technical document writing repository
 ### Pandoc
 
 - pdf generate
+
+```shell
+$ make all
+```
+
+Need package below:
+- [pandoc](https://github.com/jgm/pandoc)
+- [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf)
