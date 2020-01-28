@@ -1,15 +1,14 @@
 # technical-writing-template
+
 Template technical document writing repository
 
 ## usage
-### CI
-- textlint with reviewdog
 
-### local Lint
-- textlint with reviewdog
+### GitHub Actions
 
-Currently, manual package install.
-TODO: package.json create.
+- textlint with reviewdog
+- redpen   with reviewdog
 
 ### Pandoc
+
 - pdf generate
