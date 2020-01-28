@@ -1,6 +1,0 @@
-runner:
-  textlint:
-    cmd: npx textlint -f compact doc/*.md
-    errorformat:
-      - "%f:%l:%c: %m"
-      - "%f: line %l, col %c, %m"
