@@ -1,0 +1,24 @@
+{
+  "name": "textlint-tech-base",
+  "version": "1.0.0",
+  "description": "techlog base",
+  "main": "",
+  "config": {
+  },
+  "scripts": {
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuyoshicho/textlint-tech-base.git"
+  },
+  "keywords": [
+    "textlint"
+  ],
+  "author": "tsuyoshi_cho <Tsuyoshi.CHO+npm@Gmail.com>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/tsuyoshicho/textlint-tech-base/issues"
+  },
+  "homepage": "https://github.com/tsuyoshicho/textlint-tech-base#readme"
+}
