@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "techlog base",
   "main": "",
-  "config": {
-  },
+  "config": {},
   "scripts": {
     "test": "echo"
   },
@@ -20,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/tsuyoshicho/textlint-tech-base/issues"
   },
-  "homepage": "https://github.com/tsuyoshicho/textlint-tech-base#readme"
+  "homepage": "https://github.com/tsuyoshicho/textlint-tech-base#readme",
+  "devDependencies": {
+    "textlint": "^11.7.6",
+    "textlint-rule-preset-japanese": "^5.0.0"
+  }
 }
