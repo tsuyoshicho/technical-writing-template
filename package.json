@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/tsuyoshicho/textlint-tech-base#readme",
   "devDependencies": {
-    "textlint": "^11.7.6",
-    "textlint-rule-preset-japanese": "^5.0.0"
+    "textlint": "11.7.6",
+    "textlint-rule-preset-japanese": "5.0.0"
   }
 }
