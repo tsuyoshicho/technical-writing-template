@@ -1,8 +1,16 @@
 {
   "plugins": {
-    "@textlint/markdown": false
+    "@textlint/markdown": {
+      "extensions": [".markdown", ".mdown", ".mkdn", ".mkd", ".md"]
+    }
   },
   "rules": {
-    "preset-japanese": false
+    "preset-japanese": {
+      "sentence-length": false,
+      "max-ten": {
+        "max": 5
+      },
+      "no-mix-dearu-desumasu": false
+    }
   }
 }
