@@ -4,7 +4,7 @@ Japanese document writing base for textlint
 
 ## 利用法
 
-GitHubのテンプレートリポジトとして利用
+GitHubのテンプレートリポジトリとして利用
 
 ## 導入
 
