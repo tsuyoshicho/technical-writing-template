@@ -1,25 +1,13 @@
 {
   "plugins": {
-    "@textlint/markdown": {
-      "extensions": [".md"]
-    }
   },
   "rules": {
-    "spellcheck-tech-word": true,
-    "prh": {
-      "rulePaths": ["./prh.yml"]
-    },
-    "preset-ja-technical-writing": {
+    "preset-japanese": {
+      "sentence-length": false,
       "max-ten": {
-        "max": 3
+        "max": 5
       },
-      "no-mix-dearu-desumasu": true,
-      "ja-no-abusage": true,
-      "ja-no-redundant-expression": true,
-      "no-unmatched-pair": true,
-      "no-double-negative-ja": true,
-      "no-doubled-conjunctive-particle-ga": true
+      "no-mix-dearu-desumasu": false
     }
   }
 }
-
