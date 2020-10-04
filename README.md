@@ -1,6 +1,6 @@
 # textlint-template-base
 
-Writing base for textlint
+Japanese document writing base for textlint
 
 ## 利用法
 
