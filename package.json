@@ -1,5 +1,5 @@
 {
-  "name": "textlint-template-base",
+  "name": "textlint-template-tech",
   "version": "1.0.0",
   "description": "Japaneses documents linting template base",
   "main": "",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsuyoshicho/textlint-template-base.git"
+    "url": "git+https://github.com/tsuyoshicho/textlint-template-tech.git"
   },
   "keywords": [
     "textlint"
@@ -17,9 +17,9 @@
   "author": "tsuyoshi_cho <Tsuyoshi.CHO+npm@Gmail.com>",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/tsuyoshicho/textlint-template-base/issues"
+    "url": "https://github.com/tsuyoshicho/textlint-template-tech/issues"
   },
-  "homepage": "https://github.com/tsuyoshicho/textlint-template-base#readme",
+  "homepage": "https://github.com/tsuyoshicho/textlint-template-tech#readme",
   "devDependencies": {
     "@proofdict/textlint-rule-proofdict": "^3.1.1",
     "@textlint/textlint-plugin-markdown": "^5.2.6",

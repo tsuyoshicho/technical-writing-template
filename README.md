@@ -1,6 +1,6 @@
-# textlint-template-base
+# textlint-template-tech
 
-Japanese document writing base for textlint
+Techlog (like technical Japanese document) writing base for textlint
 
 ## 利用法
 
