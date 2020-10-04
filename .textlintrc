@@ -14,6 +14,7 @@
       },
       "no-mix-dearu-desumasu": false
     },
+    "preset-ja-technical-writing": false,
     "preset-ja-spacing": false,
     "general-novel-style-ja": false
   }

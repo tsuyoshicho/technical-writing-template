@@ -18,6 +18,17 @@
       },
       "no-mix-dearu-desumasu": false
     },
+    "preset-ja-technical-writing": {
+      "max-ten": {
+        "max": 3
+      },
+      "no-mix-dearu-desumasu": true,
+      "ja-no-abusage": true,
+      "ja-no-redundant-expression": true,
+      "no-unmatched-pair": true,
+      "no-double-negative-ja": true,
+      "no-doubled-conjunctive-particle-ga": true
+    },
     "preset-ja-spacing": {
       "ja-no-space-between-full-width": false
     },
