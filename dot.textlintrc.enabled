@@ -5,12 +5,33 @@
     }
   },
   "rules": {
+    "@proofdict/proofdict": {
+      "dictURL": "https://tsuyoshicho.github.io/proof-dictionary/"
+    },
+    "prh": {
+      "rulePaths": ["./prh.yml"]
+    },
     "preset-japanese": {
       "sentence-length": false,
       "max-ten": {
         "max": 5
       },
       "no-mix-dearu-desumasu": false
-    }
+    },
+    "preset-ja-technical-writing": {
+      "max-ten": {
+        "max": 3
+      },
+      "no-mix-dearu-desumasu": true,
+      "ja-no-abusage": true,
+      "ja-no-redundant-expression": true,
+      "no-unmatched-pair": true,
+      "no-double-negative-ja": true,
+      "no-doubled-conjunctive-particle-ga": true
+    },
+    "preset-ja-spacing": {
+      "ja-no-space-between-full-width": false
+    },
+    "general-novel-style-ja": true
   }
 }
