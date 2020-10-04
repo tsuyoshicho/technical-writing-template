@@ -1,5 +1,6 @@
 {
   "plugins": {
+    "@textlint/markdown": false
   },
   "rules": {
     "preset-japanese": false

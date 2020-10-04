@@ -1,5 +1,8 @@
 {
   "plugins": {
+    "@textlint/markdown": {
+      "extensions": [".markdown", ".mdown", ".mkdn", ".mkd", ".md"]
+    }
   },
   "rules": {
     "preset-japanese": {
