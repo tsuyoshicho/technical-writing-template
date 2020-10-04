@@ -2,6 +2,8 @@ version: 1
 
 imports:
   - ./azu-prh-rules/ja/typo.yml
+  - ./azu-prh-rules/ja/web+db.yml
   - ./prh-rules/files/markdown.yml
-  # - ./prh-rules/media/techbooster.yml
+  - ./prh-rules/media/WEB+DB_PRESS.yml
+  - ./prh-rules/languages/ja/typo.yml
 
