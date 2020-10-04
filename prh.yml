@@ -1,0 +1,6 @@
+version: 1
+
+imports:
+  - ./prh-rules/files/markdown.yml
+  # - ./prh-rules/media/techbooster.yml
+

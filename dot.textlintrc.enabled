@@ -8,6 +8,9 @@
     "@proofdict/proofdict": {
       "dictURL": "https://tsuyoshicho.github.io/proof-dictionary/"
     },
+    "prh": {
+      "rulePaths": ["./prh.yml"]
+    },
     "preset-japanese": {
       "sentence-length": false,
       "max-ten": {
