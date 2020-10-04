@@ -1,6 +1,7 @@
 version: 1
 
 imports:
+  - ./azu-prh-rules/ja/typo.yml
   - ./prh-rules/files/markdown.yml
   # - ./prh-rules/media/techbooster.yml
 
