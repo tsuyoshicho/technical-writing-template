@@ -5,6 +5,7 @@
     }
   },
   "rules": {
+    "@proofdict/proofdict": false,
     "preset-japanese": {
       "sentence-length": false,
       "max-ten": {

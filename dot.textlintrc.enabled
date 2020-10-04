@@ -5,6 +5,9 @@
     }
   },
   "rules": {
+    "@proofdict/proofdict": {
+      "dictURL": "https://tsuyoshicho.github.io/proof-dictionary/"
+    },
     "preset-japanese": {
       "sentence-length": false,
       "max-ten": {
