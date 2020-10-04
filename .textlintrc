@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "@textlint/markdown": {
+      "extensions": [".markdown", ".mdown", ".mkdn", ".mkd", ".md"]
+    }
+  },
+  "rules": {
+    "@proofdict/proofdict": false,
+    "prh": false,
+    "preset-japanese": {
+      "sentence-length": false,
+      "max-ten": {
+        "max": 5
+      },
+      "no-mix-dearu-desumasu": false
+    },
+    "preset-ja-technical-writing": false,
+    "preset-ja-spacing": false,
+    "general-novel-style-ja": false
+  }
+}
