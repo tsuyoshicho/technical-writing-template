@@ -13,6 +13,7 @@
         "max": 5
       },
       "no-mix-dearu-desumasu": false
-    }
+    },
+    "preset-ja-spacing": false
   }
 }

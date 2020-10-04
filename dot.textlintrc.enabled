@@ -17,6 +17,9 @@
         "max": 5
       },
       "no-mix-dearu-desumasu": false
-    }
+    },
+    "preset-ja-spacing": {
+      "ja-no-space-between-full-width": false
+    },
   }
 }
