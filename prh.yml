@@ -1,7 +1,9 @@
 version: 1
 
 imports:
-  - ./prh-rules/media/techbooster.yml
+  - ./azu-prh-rules/ja/typo.yml
+    # - ./azu-prh-rules/ja/web+db.yml : don't maintenance file
   - ./prh-rules/files/markdown.yml
-  # - ./prh-rules/files/review.yml
+  - ./prh-rules/media/WEB+DB_PRESS.yml
+  - ./prh-rules/languages/ja/typo.yml
 
