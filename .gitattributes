@@ -1,0 +1,10 @@
+# Always commit newlines as LF (ref #102)
+.gitattributes    text eol=lf
+.gitignore        text eol=lf
+.gitmodules       text eol=lf
+
+package-lock.json text eol=lf
+package.json      text eol=lf
+
+*.md              text
+# EOF
