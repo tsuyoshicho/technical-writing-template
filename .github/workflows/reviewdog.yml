@@ -44,21 +44,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: true
-      - name: redpen-github-check
+      - name: Select reporter
+        uses: haya14busa/action-cond@v1
+        id: reporter
+        with:
+          cond: ${{ github.event_name == 'pull_request' }}
+          if_true: "github-pr-review"
+          if_false: "github-check"
+      - name: Lint redpen
         uses: tsuyoshicho/action-redpen@v1
-        if: github.event_name != 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-check
-          basedir: "doc"
-          targets: "*.md"
-          config: "config/redpen-conf-ja.xml"
-      - name: redpen-github-pr-review
-        uses: tsuyoshicho/action-redpen@v1
-        if: github.event_name == 'pull_request'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
+          reporter: ${{ steps.reporter.outputs.value }}
           basedir: "doc"
           targets: "*.md"
           config: "config/redpen-conf-ja.xml"
