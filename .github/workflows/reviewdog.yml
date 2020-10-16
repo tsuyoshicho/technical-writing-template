@@ -20,19 +20,17 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: textlint-github-check
+      - name: Select reporter
+        uses: haya14busa/action-cond@v1
+        id: reporter
+        with:
+          cond: ${{ github.event_name == 'pull_request' }}
+          if_true: "github-pr-review"
+          if_false: "github-check"
+      - name: Lint textlint
         uses: tsuyoshicho/action-textlint@v1
-        if: github.event_name != 'pull_request'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-check
-          level: info
-          textlint_flags: "doc/**"
-      - name: textlint-github-pr-review
-        uses: tsuyoshicho/action-textlint@v1
-        if: github.event_name == 'pull_request'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
+          reporter: ${{ steps.reporter.outputs.value }}
           level: info
           textlint_flags: "doc/**"
