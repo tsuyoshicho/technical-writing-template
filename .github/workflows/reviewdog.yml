@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           submodules: true
       - name: Get npm cache directory
@@ -14,21 +14,21 @@ jobs:
         run: |
           echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - name: Check npm cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4.2.3
         with:
           path: ${{ steps.npm-cache.outputs.dir }}
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Select reporter
-        uses: haya14busa/action-cond@v1
+        uses: haya14busa/action-cond@v1.2.1
         id: reporter
         with:
           cond: ${{ github.event_name == 'pull_request' }}
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Lint textlint
-        uses: tsuyoshicho/action-textlint@v3
+        uses: tsuyoshicho/action-textlint@v3.10.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: ${{ steps.reporter.outputs.value }}
@@ -39,18 +39,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
         with:
           submodules: true
       - name: Select reporter
-        uses: haya14busa/action-cond@v1
+        uses: haya14busa/action-cond@v1.2.1
         id: reporter
         with:
           cond: ${{ github.event_name == 'pull_request' }}
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Lint redpen
-        uses: tsuyoshicho/action-redpen@v1
+        uses: tsuyoshicho/action-redpen@v1.12.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: ${{ steps.reporter.outputs.value }}
