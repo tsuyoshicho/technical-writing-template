@@ -28,7 +28,7 @@ jobs:
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Lint textlint
-        uses: tsuyoshicho/action-textlint@acab4b76cd713a83a69c4ad806ae9e837e0de009 # v3.10.0
+        uses: tsuyoshicho/action-textlint@7919989f43ad0edaa437846293219d69e1b4e759 # v3.11.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: ${{ steps.reporter.outputs.value }}
