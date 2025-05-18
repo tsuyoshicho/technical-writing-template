@@ -9,7 +9,7 @@
       "dictURL": "https://tsuyoshicho.github.io/proof-dictionary/"
     },
     "prh": {
-      "rulePaths": ["./prh.yml"]
+      "rulePaths": ["./dict/prh.yml"]
     },
     "preset-japanese": false,
     "preset-ja-technical-writing": {
