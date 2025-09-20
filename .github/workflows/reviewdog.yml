@@ -50,7 +50,7 @@ jobs:
           if_true: "github-pr-review"
           if_false: "github-check"
       - name: Lint redpen
-        uses: tsuyoshicho/action-redpen@67ff7e91508802ba6c85657ffab20748b0ccc89b # v1.13.0
+        uses: tsuyoshicho/action-redpen@b85788abf738ffd84c36313c914e5662a528c4c0 # v1.14.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: ${{ steps.reporter.outputs.value }}
