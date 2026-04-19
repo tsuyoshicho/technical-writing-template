@@ -1,6 +1,8 @@
 [submodule "dict/prh-rules"]
 	path = dict/prh-rules
 	url = https://github.com/prh/rules.git
+	branch = master
 [submodule "dict/azu-prh-rules"]
 	path = dict/azu-prh-rules
 	url = https://github.com/azu/prh.yml.git
+	branch = master
